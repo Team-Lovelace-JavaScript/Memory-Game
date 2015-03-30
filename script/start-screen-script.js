@@ -62,6 +62,7 @@ function playerLoginScreen(){
     var nickInput = document.createElement('input');
     var startButton = document.createElement('div');
 
+
     loginDiv.id = "login-div";
     nameParagraph.innerHTML = "Enter Player\'s Name";
     nameParagraph.className = "name-paragraph";
@@ -122,6 +123,7 @@ function MainGame(){
 
     document.getElementById('new-game-btn').addEventListener("click", newGame, false);
     document.getElementById('mutter').addEventListener("click", SoundPlayer.muteAllSounds, false);
+    document.getElementById('rules').addEventListener("click", displayRules, false)
 
     function newGame(){
         if(Player.gameOn === true){
