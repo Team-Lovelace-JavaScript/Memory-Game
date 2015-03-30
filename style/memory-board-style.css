@@ -59,5 +59,12 @@ body #wrapper #memory-board-wrapper div[id^="tile"]{
     background-size: 100%;
     overflow: hidden;
     font-size: 30px;
+    backface-visibility: hidden;
+    -webkit-transition-duration: 0.3s;
+    transform-style: preserve-3d;
+    transition: transform 0.2s;
 
+}
+body #wrapper #memory-board-wrapper div[id^="tile"]:active{
+    transform: rotateY( 90deg );
 }
