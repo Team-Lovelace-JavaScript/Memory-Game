@@ -7,8 +7,8 @@ var Player = {nick: "", score: 0, gameOn: false};
 var SoundPlayer = new function soundPlayer(){
     var mutter = false;
     var startingSoundPlaying = true;
-    var background_sound = new Audio('sounds/background-sound.mp3');
-    var new_game_sound = new Audio('sounds/new-game.ogg');
+    var background_sound = new Audio('sounds/background-sound.wav');
+    var new_game_sound = new Audio('sounds/new-game.wav');
 
 
     this.playSound = function(soundPath){
@@ -20,7 +20,7 @@ var SoundPlayer = new function soundPlayer(){
         startingSoundPlaying = true;
         if(mutter === false){
             background_sound.play();
-            background_sound.loop = "true";
+            background_sound.loop = 'true';
         }
     };
 
