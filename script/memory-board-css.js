@@ -2,6 +2,65 @@
  * Created by user on 13.3.2015 г..
  */
 /************************* CONSTRUCTORS *************************/
+var SoundPlayer = new function soundPlayer(){
+    var mutter = false;
+    var startingSoundPlaying = true;
+    var background_sound = new Audio('sounds/background-sound.wav');
+    var new_game_sound = new Audio('sounds/new-game.wav');
+    var  hit = new Audio('sounds/hit.mp3');
+    var incorrect = new Audio('sounds/incorrect.wav');
+
+    this.playSound = function(soundPath){
+        var sound = new Audio(soundPath);
+        sound.play();
+    };
+    this.playHitSound = function(){
+        startingSoundPlaying = true;
+        if(mutter === false){
+            hit.play();
+        }
+    };
+    this.playIncorrect = function(){
+        startingSoundPlaying = true;
+        if(mutter === false){
+            incorrect.play();
+        }
+    };
+
+    this.playBackgroundMusic = function(){
+        startingSoundPlaying = true;
+        if(mutter === false){
+            background_sound.play();
+            background_sound.loop = 'true';
+        }
+    };
+
+    this.stopBackgroundSound = function(){
+        startingSoundPlaying = false;
+        background_sound.pause();
+    };
+
+    this.startNewGameSound = function(){
+        if(mutter === false){
+            new_game_sound.play();
+        }
+    };
+
+    this.muteAllSounds = function(){
+        if(mutter === false){
+            background_sound.pause();
+            mutter = true;
+            document.getElementById('mutter').innerHTML = "<img src=\'images/sounds-off.png\'/>";
+        }else{
+            mutter = false;
+            document.getElementById('mutter').innerHTML = "<img src=\'images/sounds-on.png\'/>";
+            if(startingSoundPlaying === true){
+                background_sound.play();
+            }
+
+        }
+    }
+};
 function Levels(lvl, boardWidth, timeInSec, tiles){
     this.level = lvl;
     this.boardWidth = boardWidth;
@@ -36,6 +95,7 @@ var timer = new function Timer(){
         progress.style.width = "0%";
         progress.style.transition = "width " + Level.timeInSec +"s linear 0s";
         progress.style.width = "100%";
+        SoundPlayer.playBackgroundMusic();
     };
     this.stop = function(Level){
         if(Level.playing === true){
@@ -119,14 +179,10 @@ function startPlaying(Deck, Level){
     }, Level.timeInSec*1000);
     timer.start(Level);
 
-    function hitSound(){
-        var hit = new Audio('sounds/hit.mp3');
-        hit.play();
-    }
 
     function hitMe(e){
         if(this.getAttribute('flipped') === "false"){
-            hitSound();
+            SoundPlayer.playHitSound();
             this.setAttribute('flipped', "true");
             this.style.background = this.getAttribute("backside");
             if(cardsOpened === 0){
@@ -143,7 +199,8 @@ function startPlaying(Deck, Level){
                         levelUp(Level,  Deck);
                     }
                 }else{
-                        flip2Back(this, tempCard);
+                    SoundPlayer.playIncorrect()
+                    flip2Back(this, tempCard);
                 }
             }
         }

@@ -57,6 +57,25 @@ body #wrapper #login-div{
         transition-property: transform;
 
     }
+body #wrapper #login-div #end-btn{
+    margin: auto;
+    display: block;
+    width: 100px;
+    border: 2px solid #000;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.8);
+    box-shadow: 0px 0px 5px black;
+    -webkit-box-shadow: 0px 0px 5px black;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+
+}
     body #wrapper #login-div #start-btn:hover{
         cursor: pointer;
         -webkit-transform: scale(1.1);
