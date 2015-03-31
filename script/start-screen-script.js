@@ -124,6 +124,7 @@ function MainGame(){
     document.getElementById('new-game-btn').addEventListener("click", newGame, false);
     document.getElementById('mutter').addEventListener("click", SoundPlayer.muteAllSounds, false);
     document.getElementById('rules').addEventListener("click", displayRules, false);
+    document.getElementById('credits').addEventListener("click", displayCredits, false);
 
     function newGame(){
         if(Player.gameOn === true){
