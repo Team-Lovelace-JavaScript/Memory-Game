@@ -10,9 +10,9 @@ function displayCredits(){
     var okButton = document.createElement("div");
 
     creditsParagraph.style.margin = "40px";
-    creditsParagraph.style.marginTop = "80px";
+    creditsParagraph.style.marginTop = "55px";
     creditsParagraph.style.marginBottom = "10px";
-    creditsParagraph.style.textAlign = "left";
+    creditsParagraph.style.textAlign = "center";
     endParagraph.style.marginTop = "10px";
     endParagraph.style.marginBottom = "15px";
 

@@ -8,7 +8,7 @@
     margin: 0;
 }
 body{
-    background: #999999;
+	background: url(../images/Bulgaria.jpg) center center;
 }
 
 body> #wrapper{

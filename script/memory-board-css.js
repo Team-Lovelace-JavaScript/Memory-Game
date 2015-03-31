@@ -244,9 +244,9 @@ function startPlaying(Deck, Level){
     function flip2Back(cardA, cardB){
         setTimeout(function(){
             cardA.setAttribute('flipped', "false");
-            cardA.style.background = "url('images/tile_bg.jpg')";
+            cardA.style.background = "url('images/redDot18.png')";
             cardB.setAttribute('flipped', "false");
-            cardB.style.background = "url('images/tile_bg.jpg')";
+            cardB.style.background = "url('images/redDot18.png')";
         }, 750);
     }
 }

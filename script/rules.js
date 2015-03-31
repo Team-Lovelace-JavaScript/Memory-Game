@@ -12,7 +12,7 @@ function displayRules(){
     rulesParagraph.style.margin = "40px";
     rulesParagraph.style.marginTop = "80px";
     rulesParagraph.style.marginBottom = "10px";
-    rulesParagraph.style.textAlign = "left";
+    rulesParagraph.style.textAlign = "center";
     endParagraph.style.marginTop = "10px";
     endParagraph.style.marginBottom = "15px";
 
@@ -27,7 +27,7 @@ function displayRules(){
          "5. Levels start one after another without pause, so be ready to start the next level immediately after you have won the previous one.</br>";
 
     endParagraph.innerHTML = "GOOD LUCK!";
-    okButton.innerHTML = "OK";
+    okButton.innerHTML = "Continue...";
 
     wrapper.appendChild(rulesDiv);
     rulesDiv.appendChild(rulesParagraph);
