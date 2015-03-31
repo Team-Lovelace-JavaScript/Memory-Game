@@ -22,11 +22,11 @@ function displayCredits(){
     creditsParagraph.innerHTML =
         'The credits goes to Team "Lovelace"</br>' +
         'Team Members:</br>' +
-        "1. Delcho Dimitrov <a href='https://softuni.bg/users/profile/show/kolimnared' target='_blank' style='margin-left: 45px'><img width='40px' height='40px' src='images/Daniel.png'/></a></br>" +
-        "2. Daniel Jelev <a href='https://softuni.bg/users/profile/show/jinjaar' target='_blank' style='margin-left: 60px'><img width='40px' height='40px' src='images/Daniel.png'/></a></br>" +
-        "3. Georgi Ivanov <a href='https://softuni.bg/users/profile/show/g.ivanoff' target='_blank' style='margin-left: 60px'><img width='40px' height='40px' src='images/Daniel.png'/></a></br>" +
+        "1. Delcho Dimitrov <a href='https://softuni.bg/users/profile/show/kolimnared' target='_blank' style='margin-left: 50px'><img width='40px' height='40px' src='images/Delcho.jpg'/></a></br>" +
+        "2. Daniel Jelev <a href='https://softuni.bg/users/profile/show/jinjaar' target='_blank' style='margin-left: 65px'><img width='40px' height='40px' src='images/Daniel.png'/></a></br>" +
+        "3. Georgi Ivanov <a href='https://softuni.bg/users/profile/show/g.ivanoff' target='_blank' style='margin-left: 60px'><img width='40px' height='40px' src='images/Georgi.jpg'/></a></br>" +
         "4. Konstantin Kirchev <a href='https://softuni.bg/users/profile/show/konstantinkirchev' target='_blank' style='margin-left: 38px'><img width='40px' height='40px' src='images/Konstantin.png'/></a></br>" +
-        "5. Tsvetelin Kutsarov <a href='https://softuni.bg/users/profile/show/tkutsarov' target='_blank' style='margin-left: 38px'><img width='40px' height='40px' src='images/Daniel.png'/></a></br>";
+        "5. Tsvetelin Kutsarov <a href='https://softuni.bg/users/profile/show/tkutsarov' target='_blank' style='margin-left: 38px'><img width='40px' height='40px' src='images/Tsvetelin.jpg'/></a></br>";
 
     okButton.innerHTML = "Continue...";
 
