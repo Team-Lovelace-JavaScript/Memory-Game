@@ -123,7 +123,7 @@ function MainGame(){
 
     document.getElementById('new-game-btn').addEventListener("click", newGame, false);
     document.getElementById('mutter').addEventListener("click", SoundPlayer.muteAllSounds, false);
-    document.getElementById('rules').addEventListener("click", displayRules, false)
+    document.getElementById('rules').addEventListener("click", displayRules, false);
 
     function newGame(){
         if(Player.gameOn === true){
@@ -133,7 +133,6 @@ function MainGame(){
         main_wrapper.style.background  = "url(\'images/background-no-text.jpg\')";
         playerLoginScreen();
     }
-
 }
 
 window.addEventListener("load", MainGame);
