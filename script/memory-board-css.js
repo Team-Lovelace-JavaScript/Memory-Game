@@ -150,8 +150,48 @@ function flipTile(){
 }
 
 function gameOver(){
-    alert('GAME OVER');
-    location.reload();
+    function displayCredits(){
+        document.getElementById('credits').removeEventListener("click", displayCredits, false);
+
+        var wrapper = document.getElementById("wrapper");
+        wrapper.style.background  = "url(\'images/background-no-text.jpg\')";
+
+        var creditsDiv = document.createElement("div");
+        var creditsParagraph = document.createElement("div");
+        var endParagraph = document.createElement("div");
+        var okButton = document.createElement("div");
+
+
+        creditsParagraph.style.marginTop = "80px";
+        creditsParagraph.style.fontSize = "30px";
+        endParagraph.style.marginTop = "100px";
+
+
+        creditsDiv.id = "login-div";
+        okButton.id = "start-btn";
+
+        creditsParagraph.innerHTML =
+            'G A M E    O V E R </br>'+
+            document.getElementById("player-name").innerHTML+'</br>'+
+            document.getElementById("score-info").innerHTML
+        ;
+
+        okButton.innerHTML = "Restart";
+
+        wrapper.appendChild(creditsDiv);
+        creditsDiv.appendChild(creditsParagraph);
+        creditsDiv.appendChild(endParagraph);
+        creditsDiv.appendChild(okButton);
+
+        slideOpen(creditsDiv, 450, 1.2);
+
+        okButton.onclick = function(){
+            document.getElementById('credits').addEventListener("click", displayCredits, false);
+            slideClose(creditsDiv, 1.2);
+            location.reload();
+        }
+    }
+    displayCredits();
 }
 
 function levelUp(Level, Deck){
@@ -160,7 +200,7 @@ function levelUp(Level, Deck){
     Deck = null;
 
     timer.reset();
-    alert('Level: ' + (nextLevel + 1));
+    //alert('Level: ' + (nextLevel + 1));
     memoryBoard(nextLevel);
 }
 
