@@ -9,6 +9,7 @@ var SoundPlayer = new function soundPlayer(){
     var new_game_sound = new Audio('sounds/new-game.wav');
     var  hit = new Audio('sounds/hit.mp3');
     var incorrect = new Audio('sounds/incorrect.wav');
+    var game_over = new Audio('sounds/game_over.wav');
 
     this.playSound = function(soundPath){
         var sound = new Audio(soundPath);
@@ -43,6 +44,12 @@ var SoundPlayer = new function soundPlayer(){
     this.startNewGameSound = function(){
         if(mutter === false){
             new_game_sound.play();
+        }
+    };
+    this.playGameOver = function(){
+        startingSoundPlaying = true;
+        if(mutter === false){
+            game_over.play();
         }
     };
 
@@ -99,6 +106,7 @@ var timer = new function Timer(){
     };
     this.stop = function(Level){
         if(Level.playing === true){
+            SoundPlayer.playGameOver();
             gameOver();
         }
     };
