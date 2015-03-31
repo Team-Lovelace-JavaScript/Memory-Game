@@ -55,7 +55,7 @@ body #wrapper #memory-board-wrapper div[id^="tile"]{
     width: 90px;
     height: 90px;
     margin: 5px;
-    background-image: url("../images/tile_bg.jpg");
+    background-image: url("../images/redDot18.png");
     background-size: 100%;
     overflow: hidden;
     font-size: 30px;
