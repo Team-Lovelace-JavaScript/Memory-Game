@@ -145,10 +145,6 @@ function addTiles(board, Deck, i, Level){
     }
 }
 
-function flipTile(){
-
-}
-
 function gameOver(){
     function displayCredits(){
         document.getElementById('credits').removeEventListener("click", displayCredits, false);
@@ -200,7 +196,6 @@ function levelUp(Level, Deck){
     Deck = null;
 
     timer.reset();
-    //alert('Level: ' + (nextLevel + 1));
     memoryBoard(nextLevel);
 }
 
@@ -239,7 +234,7 @@ function startPlaying(Deck, Level){
                         levelUp(Level,  Deck);
                     }
                 }else{
-                    SoundPlayer.playIncorrect()
+                    SoundPlayer.playIncorrect();
                     flip2Back(this, tempCard);
                 }
             }
