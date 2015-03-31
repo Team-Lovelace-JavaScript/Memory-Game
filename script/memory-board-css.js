@@ -119,8 +119,14 @@ function startPlaying(Deck, Level){
     }, Level.timeInSec*1000);
     timer.start(Level);
 
+    function hitSound(){
+        var hit = new Audio('sounds/hit.mp3');
+        hit.play();
+    }
+
     function hitMe(e){
         if(this.getAttribute('flipped') === "false"){
+            hitSound();
             this.setAttribute('flipped', "true");
             this.style.background = this.getAttribute("backside");
             if(cardsOpened === 0){
