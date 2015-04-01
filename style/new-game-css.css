@@ -7,6 +7,7 @@ body #wrapper #login-div{
     top: 30px;
     left: 300px;
     font-family: "Mesquite std", Arial, sans-serif;
+    font-size: 18px;
     overflow: hidden;
     overflow-style: marquee-block;
     text-align: center;

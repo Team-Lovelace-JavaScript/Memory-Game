@@ -66,5 +66,5 @@ body #wrapper #memory-board-wrapper div[id^="tile"]{
 
 }
 body #wrapper #memory-board-wrapper div[id^="tile"]:active{
-    transform: rotateY( 90deg );
+    -webkit-transform: rotateY( 90deg );
 }
