@@ -156,7 +156,7 @@ function addTiles(board, Deck, i, Level){
 function gameOver(){
     function displayCredits(){
         document.getElementById('credits').removeEventListener("click", displayCredits, false);
-
+		document.getElementById('memory-board').innerHTML = '';
         var wrapper = document.getElementById("wrapper");
         wrapper.style.background  = "url(\'images/background-no-text.jpg\')";
 
