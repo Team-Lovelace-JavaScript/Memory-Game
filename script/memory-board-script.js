@@ -5,11 +5,11 @@
 var SoundPlayer = new function soundPlayer(){
     var mutter = false;
     var startingSoundPlaying = true;
-    var background_sound = new Audio('sounds/background-sound.wav');
-    var new_game_sound = new Audio('sounds/new-game.wav');
+    var background_sound = new Audio('sounds/background-sound.mp3');
+    var new_game_sound = new Audio('sounds/new-game.mp3');
     var  hit = new Audio('sounds/hit.mp3');
-    var incorrect = new Audio('sounds/incorrect.wav');
-    var game_over = new Audio('sounds/game_over.wav');
+    var incorrect = new Audio('sounds/incorrect.mp3');
+    var game_over = new Audio('sounds/game_over.mp3');
 
     this.playSound = function(soundPath){
         var sound = new Audio(soundPath);
