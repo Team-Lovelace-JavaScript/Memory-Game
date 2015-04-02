@@ -56,7 +56,7 @@ var SoundPlayer = new function soundPlayer(){
 
 function playerLoginScreen(){
     Player.gameOn = true;
-
+	timer.reset();
     SoundPlayer.stopBackgroundSound();
     SoundPlayer.startNewGameSound();
     var wrapper = document.getElementById("wrapper");
